@@ -1,10 +1,8 @@
 import os
 import google.generativeai as genai
 
-# Read API key from environment for safety. Set GENAI_API_KEY (preferred)
-# If not set, fall back to the provided key for immediate testing.
-API_KEY = os.environ.get("GENAI_API_KEY") or os.environ.get("GOOGLE_API_KEY") or \
-    "os.getenv("GEMINI_API_KEY")"
+# Read API key from environment for safety. Set GEMINI_API_KEY (preferred)
+API_KEY = os.getenv("GEMINI_API_KEY")
 
 genai.configure(api_key=API_KEY)
 
